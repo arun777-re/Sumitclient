@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Box sx={{backgroundColor:"whitesmoke"}}>
 
-    <Box className='contact-main' height={'700px'}
+    <Box className='contact-main page-container' height={'700px'}
     id='contact' >
 
       <Box component={'div'} className='contact-main-1'> 
@@ -18,7 +18,7 @@ HOW&nbsp;FIND&nbsp;US
 </Typography>
 <p>
  there are some ways by which you can contact us. Contact us via socialmedia,
- mobileno or leave a query about your work
+ mobile no or leave a query about your work
 </p>
       </Box>
       <Box component={'div'} className='contact-main-2'> 
@@ -27,7 +27,7 @@ HOW&nbsp;FIND&nbsp;US
 
       <Box component={'div'} className='contact-main-2-text1'>
         <h5>ADDRESS</h5>
-        <p>sUMIT ARTS SONIPAT,HARYANA</p>
+        <p>Sumitarts Sonipat,HARYANA</p>
       </Box>
       <Box component={'div'} className='component-main-text2'>
      <h5>CALL US</h5>

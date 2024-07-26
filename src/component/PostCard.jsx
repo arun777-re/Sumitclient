@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link, useNavigate, useParams} from 'react-router-dom';
-import {Card,CardMedia,CardContent,Typography, Box} from '@mui/material'
+import {Card,Typography} from '@mui/material'
 
 const PostCard = ({id,imageUrl,title}) => {
   const navigate = useNavigate();
   const imageurl = imageUrl[0]
 
-console.log(`${imageurl}`)
+console.log(`${imageurl}`);
   return (
   
     <Link to={`/card/${id}`} style={{textDecoration:"none"}}>
@@ -17,7 +17,7 @@ console.log(`${imageurl}`)
       {
         imageurl && (
 
-      <img src={imageurl } style={{height:"inherit",width:"100%",objectFit:"cover"}} alt='image of project'/>
+      <img src={imageurl } style={{height:"inherit",width:"100%",objectFit:"cover"}} alt='imag'/>
  
   //     <CardMedia component={'img'}
   //  height={'140'}

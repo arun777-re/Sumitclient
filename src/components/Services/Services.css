@@ -1,106 +1,242 @@
 /* encountering the main service box */
-.service-main{
-    display: flex;
-    flex-direction:row;
-    background-color: #fff;
-    height: 900px;
+.service-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 230px;
+  background-color: #fff;
+  height: 90vh;
+  margin: 0px 50px 0px 50px;
 }
 /* parent box for image -overlay-paragraph */
-.service-main-img{
- position: relative;
- width: 50%;
+.service-main-img {
+  position: relative;
+  width: 50%;
+  height: 72%;
 }
 /* box containing image */
-.service-main-img-1{
-position: relative;
-inset: 0;
-object-fit: cover;
+.service-main-img-1 {
+  position: relative;
+  inset: 0;
+  object-fit: cover;
+}
+
+.service-main-img1 img {
+  height: auto;
+  width: 500px;
 }
 /* overlay */
-.service-main-img-overlay{
+.service-main-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* target the box in which text comes */
+.service-main-img-box-wb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+/* text under the box */
+.service-main-img-box-wb-text{
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  padding: 20px 25px; 
+} 
+
+.service-main-img-box-wb-text h6{
+  color: #fff;
+  font-family:var(--font-base);
+  line-height: 1em;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-top: -40px;
+  
+}
+.service-main-img-box-wb-text p{
+  font-family: var(--font-text);
+  font-size: 15px;
+  color: #fff;
+  text-transform: lowercase;
+  margin-bottom: -30px;
+}
+
+/* box containing icons */
+.service-main-icon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 23px;
+}
+
+
+
+
+.service-main-icon-grid {
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-template-rows: 30px 30px;
+  gap: 10px; /* Adjust gap between grid items as needed */
+  justify-items: center; /* Center items horizontally within grid cells */
+  align-items: center; /* Center items vertically within grid cells */
+  font-size: 14px;
+  font-family: var(--font-text);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.service-main-icon-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: color 0.2s ease; /* Adjust transition duration as needed */
+}
+
+
+.service-main-icon-grid-item p{
+  color: #797979;
+  text-align: center;
+  line-height: 1.7em;
+  font-size: 10px;
+}
+
+.service-main-icon-grid-item img {
+  margin-bottom: 20px;
+  opacity: 0.5;
+  transition:  opacity  0.1s ease;
+}
+.service-main-icon-grid-item:active img{
+  opacity: 1;
+}
+
+
+.service-main-icon-grid-item:active {
+  color: #333333;
+}
+
+@media screen and (max-width: 800px) {
+  .service-main {
+    flex-direction: column;
+    gap: 50px;
+    height:auto;
+  }
+  .service-main-img {
+    position: relative;
+    width: 100%;
+  }
+  /* box containing image */
+  .service-main-img-1 {
+    position: relative;
+    inset: 0;
+    object-fit: cover;
+  }
+
+  .service-main-img1 img {
+    height: 200px;
+    width: 400px;
+  }
+  /* overlay */
+  .service-main-img-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
-}
-/* target the box in which text comes */
-.service-main-img-box-wb{
-position: absolute;
-top: 50%;
-left: 50%;
-transform:translate(-50%,-50%);
-text-align: center;
-padding: 50px 20px 45px 20px;
+  }
 
-}
-
-/* text under the box */
-
-.service-main-img-box-wb-text{
-    border: 5px solid #fff;
-    color: #fff;
-font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-line-height: 1.7em;
-font-size:14px;
-letter-spacing: 1px;
-    background-color: rgba(255,255,255,0.8);
-}
-
-
-/* box containing icons */
-.service-main-icon{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* float: right; */
-
-}
-
-.service-main-icon-grid{
+  .service-main-icon-grid-item img {
+    height: 30px;
+    width: 40px;
+    object-fit: contain;
+  }
+  .service-main-icon-grid-item p {
+    font-size: 14px;
+    font-family: var(--font-base);
+  }
+  .service-main-icon-grid {
     display: grid;
-    grid-template-columns:60px 60px;
-    grid-template-rows: 60px 60px;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
     grid: area span 4px;
     font-size: 14px;
     font-family: var(--font-text);
     letter-spacing: 1px;
     cursor: pointer;
+  }
 }
 
-.service-main-icon-grid-item{
+@media screen and (max-width: 600px) {
+  .service-main{
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height:auto;
+    margin: 0px 20px 0px 20px;
+  }
+  .service-main-img {
     width: 100%;
-    cursor: pointer;
+  }
+  .service-main-img-1 img {
+    height:300px;
+    width: 300px;
+  }
+
+  .service-main-img-box-wb-text{
+    padding:none;
     border: none;
-    background-color: transparent;
-    vertical-align: middle;
-    color: #797979;
-    text-align: center;
-    line-height: 1.7em;
-    transition: color 2sec ease;
-    
-}
-.service-main-icon-grid-item img{
-    margin-bottom: 20px;
-}
-
-.service-main-icon-grid-item:hover{
-    color: #333333;
-}
-.service-main-icon-grid-item:active{
-    color: #333333;
-}
-
-@media  screen and (max-width:800px) {
-    .service-main{
-        flex-direction:column;
-        gap: 50px;
-    }
-    .service-main-img{
-        width: 100%;
-    }
+  }
+  .service-main-img-box-wb-text h6{
+    font-size: 18px;
+    margin-top: -56px;
+  }
+  .service-main-img-box-wb-text p{
+    font-family: var(--font-text);
+    font-size: 14px;
+    margin-bottom: -60px;
+  }
+  .service-main-icon-grid-item img {
+    height: 30px;
+    width: 40px;
+    object-fit: contain;
+  }
+  .service-main-icon-grid-item p {
+    font-size: 10px;
+    font-family: var(--font-text);
+  }
+  .service-main-icon-grid{
+    grid-template-columns: 50px 50px;
+    grid-template-rows: 40px 40px;
+    margin-right: 60px;
+    margin-top: -30px;
+  }
 }
 
+@media screen and (max-width:340px) {
+  .service-main-icon-grid{
+    grid-template-columns: 30px 30px;
+    grid-template-rows: 30px 30px;
+   margin-right: 50px;
+  }
+}

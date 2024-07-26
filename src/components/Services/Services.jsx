@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { br1, br2, br3, br4, br5, br6 } from "../../assets/index";
 import services from "../../assets/services.avif";
+import about1 from '../../assets/about3.avif';
 import "./Services.css";
 
 const Services = () => {
@@ -86,14 +87,14 @@ const Services = () => {
 
   return (
     <Box
-      id="#services"
+      id="services"
       component={"div"}
       className="service-main"
       sx={{ height: { md: "650px", sm: "600px", xs: "auto" } }}
     >
       <Box component={"div"} className="service-main-img">
         <Box className="service-main-img-1" component={"div"}>
-          <img src={services} alt="ServiceImage" />
+          <img src={about1} alt="ServiceImage" />
         </Box>
         <Box component={"div"} className="service-main-img-overlay"></Box>
         <Box className="service-main-img-box-wb" component={"div"}>
@@ -103,7 +104,7 @@ const Services = () => {
             component={"div"}
             className="service-main-img-box-wb-text"
           >
-            <Typography
+            <h6
               sx={{
                 color: "#fff",
                 fontSize: "28px",
@@ -112,12 +113,12 @@ const Services = () => {
               }}
             >
               {heading}
-            </Typography>
-            <Typography
+            </h6>
+            <p
               sx={{ fontSize: "14px", letterSpacing: "1px", lineHeight: "1em" }}
             >
               {text}
-            </Typography>
+            </p>
           </Box>
         </Box>
       </Box>
@@ -125,7 +126,7 @@ const Services = () => {
         <Box
           className="service-main-icon-grid"
           component={"div"}
-          sx={{ gap: { xs: "65px 90px", sm: "100px 150px" } }}
+          sx={{ gap: { xs: "65px 90px", sm: "100px 150px" }}}
         >
           <Typography
             ref={BDref}
@@ -133,8 +134,9 @@ const Services = () => {
             onClick={handleClick}
           >
             {" "}
-            <img src={br1} ref={BDref} />
-            BRANDING&nbsp;DESIGN
+            <img src={br1} ref={BDref} alt="branding"/>
+            <p>  BRANDING&nbsp;DESIGN</p>
+          
           </Typography>
 
           <Typography
@@ -142,8 +144,9 @@ const Services = () => {
             className="service-main-icon-grid-item"
             onClick={handleClick}
           >
-            <img src={br2} style={{ fontSize: "45px" }} />
-            WEB&nbsp;DESIGN
+            <img src={br2} style={{ fontSize: "45px" }} alt="web design"/>
+            <p>WEB&nbsp;DESIGN</p>
+            
           </Typography>
 
           <Typography
@@ -151,16 +154,18 @@ const Services = () => {
             className="service-main-icon-grid-item"
             onClick={handleClick}
           >
-            <img src={br3} />
-            VIDEO&nbsp;PRODUCTION
+            <img src={br3} alt="video production"/>
+            <p>VIDEO&nbsp;PRODUCTION</p>
+            
           </Typography>
           <Typography
             ref={Mref}
             className="service-main-icon-grid-item"
             onClick={handleClick}
           >
-            <img src={br4} />
-            MARKETING
+            <img src={br4} alt="marketting"/>
+            <p> MARKETING</p>
+           
           </Typography>
 
           <Typography
@@ -168,16 +173,18 @@ const Services = () => {
             className="service-main-icon-grid-item"
             onClick={handleClick}
           >
-            <img src={br5} />
-            DEVELOPMENT
+            <img src={br5} alt="development"/>
+            <p> DEVELOPMENT</p>
+           
           </Typography>
           <Typography
             ref={Pref}
             className="service-main-icon-grid-item"
             onClick={handleClick}
           >
-            <img src={br6} />
-            PHOTOGRAPHY
+            <img src={br6} alt="photography"/>
+            <p> PHOTOGRAPHY</p>
+           
           </Typography>
         </Box>
       </Box>

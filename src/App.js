@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import './App.css'; // Optional: Import your CSS file for styling
 import {Home,About,Services,WorkProcess,Portfolio,OurTeam,Contact, Navbar} from './components';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { User } from './component';
+import { PopUp, PostCard, User } from './component';
 
 
 const App = () => {
@@ -34,15 +34,16 @@ const App = () => {
   return (
     <BrowserRouter>
     <Navbar/>
-    <Home innerRef={homeRef} />
-      <About innerRef={aboutRef} />
-      <Services innerRef={servicesRef} />
+    <Home innerRef={homeRef}/>
+      <About innerRef={aboutRef}/>
+      <Services innerRef={servicesRef}/>
       <WorkProcess innerRef={workProcessRef} />
-      <Portfolio innerRef={portfolioRef} />
-      <OurTeam innerRef={ourTeamRef} />
-      <Contact innerRef={contactRef} />
+      <Portfolio innerRef={portfolioRef}/>
+      <OurTeam innerRef={ourTeamRef}/>
+      <Contact innerRef={contactRef}/>
       <Routes>
       <Route path='/login' element={<User/>}/>
+      <Route path='/card/:id' element={<PopUp/>} />
       </Routes>
     </BrowserRouter>
   );

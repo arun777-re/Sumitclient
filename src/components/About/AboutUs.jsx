@@ -1,8 +1,7 @@
 import { Box,CardMedia, Typography } from '@mui/material'
 import React from 'react';
 import './About.css';
-import about1 from '../../assets/about1.jpg';
-import about2 from '../../assets/about2.jpg';
+import about1 from '../../assets/agency.jpg';
 
 const AboutUs = () => {
   return (
@@ -10,34 +9,23 @@ const AboutUs = () => {
     sx={{bgcolor:"#lightblue"}}>
       <Box component='div'
       className='about-main-img'>
-        <Box component={'div'} className='about-main-img1'>
-        <img src={about1} />
+        <img src={about1} alt='about1'/>
 
-        </Box>
-        <Box component={'div'} className='about-main-img2'>
-        <img src={about2}/>
-
-        </Box>
+      
       </Box>
       <Box component='div'
       className='about-main-text'>
         <Box component={'div'}
         className='about-main-text1'>
 
-      <Typography 
-      className='about-main-text1-p1'
-      variant='h3'
-      sx={{fontSize:"40px",
-      marginBottom:"26px",
-      fontWeight:"600",color:"#35373e"}}>
+      <h3
+      >
        ABOUT AGENCY
-      </Typography>
-      <Typography className='about-main-text1-p2'
-       variant='h6'
-       sx={{fontSize:"16px",mb:"45px",lineHeight:"1.5em"}}>
-      10. “No design works unless it embodies ideas that are held common by the people for whom the object is intended.” - Adrian Forty
-
-      </Typography>
+      </h3>
+      <p>
+      Designing print collateral such as brochures, posters, and business cards, as well as digital assets like website interfaces, mobile apps, and social media graphics.
+      Designing packaging solutions that not only protect products but also communicate brand values and attract consumers on store shelves.
+      </p>
       </Box>
 
       </Box>

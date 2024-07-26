@@ -1,3 +1,15 @@
 .app-main{
     background-color:var(--primary-color);
   }
+
+  .page-container {
+    max-height: 360px;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+
+  @media screen and (min-width:768px) {
+    .page-container {
+      max-height: none;
+    }    
+  }

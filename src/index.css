@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anta&family=Finlandica:ital,wght@0,400..700;1,400..700&family=Geologica:wght@100..900&family=Maven+Pro:wght@400..900&display=swap');
-@import url('https://fonts.cdnfonts.com/css/jaapokki');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 html,body{
   margin: 0px;
   padding: 0px;
@@ -8,15 +7,20 @@ html,body{
   scroll-behavior: smooth;
   overflow-x:hidden;
   -webkit-scroll-behavior:smooth;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
 }
 :root{
-  --font-base: "Jaapokki", sans-serif;
+  --font-base:"Playfair Display", serif;
   --font-color:"#333333";
   --border-color:"#333333";
   --primary-color:"#87eeb";
   --secondary-color:"#e0ffff";
-  --font-text:"Maven Pro", sans-serif;
 }
+
+
 
 .text-focus-in {
 	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;

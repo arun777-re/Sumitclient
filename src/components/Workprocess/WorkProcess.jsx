@@ -5,9 +5,9 @@ import "./Workprocess.css";
 const WorkProcess = () => {
   // useState hook to change the heading text when clicked
   
-  const [text1, setText1] = useState("");
-  const [text2, setText2] = useState("");
-  const [heading, setHeading] = useState("");
+  const [text1, setText1] = useState("Discussion");
+  const [text2, setText2] = useState("I start by engaging with clients to understand their vision,");
+  const [heading, setHeading] = useState("Through thorough discussions, I clarify project objectives, ensuring every design decision supports the client's brand and message.");
 
   const Dref = useRef();
   const Cref = useRef();
@@ -35,29 +35,29 @@ const WorkProcess = () => {
     if (ref) {
       switch (target) {
         case Dref.current:
-          setHeading("hello meri rani");
-          setText1("alksjdfa;lkjasl;fdkjsakfl;asflkjasdklf;sdalfjak");
+          setHeading("Discussion");
+          setText1("I start by engaging with clients to understand their vision");
           setText2(
-            "Etiam sit amet libero consequat, convallis odio ac, vestibulum urna. Donec ut finibus urna, nec aliquet arcu. Praesent a dapibus dui libero ornare nec."
+            "Through thorough discussions, I clarify project objectives, ensuring every design decision supports the client's brand and message."
           );
           break;
         case Cref.current:
-          setHeading("ranu thk hai ke");
-          setText1("alksjdfa;lkjasl;fdkjsakfl;asflkjasdklf;sdalfjak");
+          setHeading("Creativity");
+          setText1("I channel creativity to craft unique concepts that resonate visually and emotionally");
           setText2(
-            "Etiam sit amet libero consequat, convallis odio ac, vestibulum urna. Donec ut finibus urna, nec aliquet arcu. Praesent a dapibus dui libero ornare nec."
+            "Turning ideas into impactful visuals, I bring conceptual designs to life, ensuring each element tells a compelling story."
           );
           break;
         case Pref.current:
-          setHeading("Loda Lashan");
-          setText1("maa ka loda gandva");
-          setText2("Bhosdi ke gandve chutiya ke paathe gandu");
+          setHeading("Productivity");
+          setText1("With a structured workflow, I prioritize tasks effectively");
+          setText2("Iterative refinement is key; I continuously review and enhance designs to achieve polished, impactful outcomes.");
           break;
         case Href.current:
-          setHeading("Gandu Person");
-          setText1("Gandu person is a very best person in the woprld");
+          setHeading("Happy Client");
+          setText1("I foster collaboration and transparency, keeping clients informed");
           setText2(
-            "hello gandu are you currently fucked by me if yes then comes one mmopre time"
+            "Ultimately, my goal is to exceed expectations, delivering designs that not only meet but surpass client satisfaction."
           );
           break;
         default:
@@ -67,7 +67,7 @@ const WorkProcess = () => {
   };
   return (
     <Box
-      id="#work"
+      id="work"
       className="workspace-main"
       sx={{ bgcolor: "whitesmoke", height: "auto" }}
       component={"div"}
@@ -75,65 +75,54 @@ const WorkProcess = () => {
       <Box component={"div"} className="workspace-main-text1">
         <h2>WORK PROCESS</h2>
         <p>
-          Duis non condimentum nunc . Nunc quis turpis eu est tincidunt rutrum.
+           Begin by engaging with clients to understand their goals, target audience, and project requirements.
           <br />
-          Cras a purus quis sem tincidunt egestav vel id lacus
+          Conduct research into the industry, competitors, and design trends to inform the creative direction.
         </p>
       </Box>
       <Box component={"div"} className="workspace-main-icons">
         <div className="workspace-main-icons-bt">
           <div
-            className="workspace-main-icons-btn show-progress"
+            className="workspace-main-icons-btn"
             onClick={handleonClick}
             ref={Dref}
           >
             <img src={whatsapp} alt="wths" />
-            <p>Discuss</p>
+            <p>DISCUSS</p>
 
-            <div className="number">
-              <p className="skill first">1</p>
-            </div>
+           
           </div>
           <div
             ref={Cref}
-            className="workspace-main-icons-btn show-progress"
+            className="workspace-main-icons-btn"
             onClick={handleonClick}
           >
-            <img src={pencil} />
+            <img src={pencil} alt="pencil"/>
             <p>CREATIVE CONCEPT</p>
-            <div className="number">
-              <p className="skill second">2</p>
-            </div>
+           
           </div>
           <div
             ref={Pref}
             type="button"
-            className="workspace-main-icons-btn show-progress"
+            className="workspace-main-icons-btn"
             onClick={handleonClick}
           >
-            <img src={aeroplane} />
+            <img src={aeroplane} alt="aeroplane"/>
             <p>PRODUCTION</p>
-            <div className="number">
-              <p className="skill third">3</p>
-            </div>
+            
           </div>
           <div
             ref={Href}
             type="button"
-            className="workspace-main-icons-btn show-progress"
+            className="workspace-main-icons-btn "
             onClick={handleonClick}
           >
-            <img src={heart} />
+            <img src={heart} alt="heart"/>
             <p>HAPPY CLIENT</p>
-            <div className="number">
-              <p className="skill fourth">4</p>
-            </div>
+         
           </div>
         </div>
-        <div
-          style={{ color: "#333", width: "10px", height: "3px" }}
-          className="progress-bar"
-        ></div>
+      
       </Box>
       <Box component={"div"} className="workspace-main-text2">
         <h4>

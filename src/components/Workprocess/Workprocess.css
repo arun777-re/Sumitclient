@@ -4,6 +4,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    margin: 0px 50px 0px 50px;
 }
 
 .workspace-main-text1{
@@ -62,41 +64,7 @@ gap: 100px;
 .workspace-main-icons-btn:hover{
 color: #333333;
 }
-/* targetting the circle with number */
- .number{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 2px solid #888;
-    width: 50px;
-    height: 50px;
-    margin-top: 50px;
-    font-size: 18px;
-    line-height:1;
-    font-family: var(--font-text);
-    color: #acafba;
- }
- 
-.number:active:after {
-    width: 200%; /* Increase the width on hover */
-}
 
-.show-progress {
-    position: relative;
-}
-
- .number p{
-    margin: 0;
-  }
-  
-  .number:hover{
-    border-color: #333;
- }
- .show-progress{
-    position: relative;
- }
 
 .workspace-main-text2{
     display: flex;
@@ -107,7 +75,11 @@ color: #333333;
 }
 
 
-@media screen and (max-width:733px) {
+@media screen and (max-width:800px) {
+    .workspace-main {
+        height: 100vh;
+        margin: 0px 20px 0px 20px;
+    }
     .number{
         display: none;
     }
@@ -125,12 +97,45 @@ color: #333333;
       grid-template-rows: 100px 100px;
     }
 
+
 }
 
 @media  screen and (max-width:350px) {
     .workspace-main-icons-bt{
         display: grid;
-        grid-template-columns: 70px 70px;
-        grid-template-rows: 80px 80px;
+        grid-template-columns: 30px 30px;
+        grid-template-rows: 30px 30px;
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+      
+      .workspace-main-text1 h2{
+        font-size: 22px;
+      }
+      .workspace-main-text1 p{
+        font-size: 13px;
+        text-align: center;
+      }
+      .workspace-main-icons-btn img{
+        height: 35px;
+        width: 35px;
+      }
+
+      .workspace-main-icons-btn p{
+        font-size: 11px;
+        font-family:var(--font-text);
+        color: #333;
+      }
+
+      .workspace-main-text2{
+        margin-top: 20px;
+      }
+      .workspace-main-text2 h2{
+        font-size: 20px;
+        text-align: left;
+      }
+      .workspace-main-text2 p {
+        font-size: 13px;
+        text-align: center;
       }
 }
