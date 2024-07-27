@@ -1,24 +1,34 @@
+/* 
+
+/* Base styles for .team-main */
 .team-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0px;
+  margin: 0;
   background-color: white;
   height: auto;
+  overflow: hidden; /* Ensure overflow is hidden initially */
 }
 
+.team-main::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+/* Styles for .team-main-1 */
 .team-main-1 p {
   text-align: center;
   font-weight: 700;
   font-size: 40px;
   line-height: 55px;
   color: #333;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   font-family: var(--font-base);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; /* Ensure no default margins interfere */
 }
 
+/* Styles for .team-main-2 */
 .team-main-2 {
   display: flex;
   gap: 20px;
@@ -26,72 +36,83 @@
   align-items: center;
   padding-bottom: 15px;
   height: 350px;
+  flex-wrap: wrap; /* Allows wrapping if needed */
 }
+
 .team-main-2-wrapper {
   position: relative;
   top: 0;
   background-color: transparent;
   padding-top: 30px;
 }
+
 .team-main-2-wrapper-icon {
   display: inline-block;
   position: absolute;
   gap: 12px;
   left: 13px;
 }
+
 .team-main-2-wrapper-icon a {
   color: #8a8b8b;
   background-color: transparent;
 }
+
 .team-main-2-wrapper-img {
   position: relative;
   z-index: 1;
-  transition: all 700ms ease-out;
-  transform: translateY(0px);
+  transition: transform 700ms ease-out;
 }
+
 .team-main-2-wrapper-img img {
   height: auto;
   width: 100%;
   max-width: 100%;
   object-fit: contain;
 }
+
 .team-main-2-wrapper-img:hover {
   cursor: ew-resize;
   transform: translateY(60px);
 }
 
+/* Responsive styles for medium screens */
 @media screen and (max-width: 700px) {
   .team-main-2 {
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 1fr 1fr; /* Use fractional units for responsive grid columns */
+    gap: 10px; /* Adjust gap for smaller screens */
   }
+
   .team-main-1 p {
     font-size: 30px;
     letter-spacing: 4px;
   }
 }
 
+/* Responsive styles for small screens */
 @media screen and (max-width: 350px) {
-	.team-main{
-		height:100%;
-		overflow: auto;
-	}
+  .team-main {
+    height: 100%;
+    overflow: auto; /* Enable scrolling for small screens */
+  }
+
   .team-main-1 p {
     font-size: 26px;
     line-height: 1.4em;
-    margin-bottom: -100px;
+    margin-bottom: 10px; /* Adjust margin */
   }
-  .team-main-2{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
 
+  .team-main-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
-  .team-main-2-wrapper-img img{
-	height: 300px;
-	width: 100px;
-	object-fit: contain;
+
+  .team-main-2-wrapper-img img {
+    height: 150px; /* Adjust height */
+    width: auto; /* Keep width auto to maintain aspect ratio */
   }
 }

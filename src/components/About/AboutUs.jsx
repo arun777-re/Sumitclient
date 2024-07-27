@@ -6,7 +6,7 @@ import about1 from '../../assets/agency.jpg';
 const AboutUs = () => {
   return (
     <Box component='div' className='about-main' 
-    sx={{bgcolor:"#lightblue"}}>
+    sx={{bgcolor:"#lightblue"}} id='about'>
       <Box component='div'
       className='about-main-img'>
         <img src={about1} alt='about1'/>

@@ -6,11 +6,15 @@ import React, { useState } from "react";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({scrollv}) => {
   const [toggle, setToggle] = useState(false);
   const isNonMobile = useMediaQuery("(min-width:1100px)");
-  // const isMobile = useMediaQuery("(max-width:900px)");
   const navigate = useNavigate();
+
+  // function for goes on which page that is clicked on navigation
+  const handleClick = (ref) =>{
+      scrollv(ref);
+  }
 
   // handle scroll behaviour of the browser
   window.addEventListener("scroll", () => {
@@ -37,7 +41,7 @@ const Navbar = () => {
         top={0}
       >
         <div
-          onClick={() => navigate("/home")}
+          onClick={() => navigate("/")}
           style={{
             display: "flex",
             marginRight: "29px",
@@ -66,25 +70,25 @@ const Navbar = () => {
             sx={{ display: "flex", justifyContent: "center" }}
           >
             <Typography component={"p"} className="nav-para">
-              <a href="/home">home</a>
+              <a href="#home" onClick={()=>handleClick('homeRef')}>home</a>
             </Typography>
             <Typography component={"p"} className="nav-para">
-              <a href="/about">about us</a>
+              <a href="#about" onClick={()=>handleClick('aboutRef')}>about us</a>
             </Typography>
             <Typography component={"p"} className="nav-para">
-              <a href="/services">services</a>
+              <a href="#services" onClick={()=>handleClick('serviceRef')}>services</a>
             </Typography>
             <Typography component={"p"} className="nav-para">
-              <a href="/work">work process</a>
+              <a href="#work" onClick={()=>handleClick('workRef')}>work process</a>
             </Typography>
             <Typography component={"p"} className="nav-para">
-              <a href="/portfolio">portfolio</a>
+              <a href="#portfolio" onClick={()=>handleClick('portfolioRef')}>portfolio</a>
             </Typography>
             <Typography component={"p"} className="nav-para">
-              <a href="/team">our team</a>
+              <a href="#team" onClick={()=>handleClick('ourTeamRef')}>our team</a>
             </Typography>
             <Typography component={"p"} className="nav-para">
-              <a href="/contacts">contact</a>
+              <a href="#contacts" onClick={()=>handleClick('contactRef')}>contact</a>
             </Typography>
           </Box>
         ) : (
@@ -121,37 +125,37 @@ const Navbar = () => {
                   component={"div"}
                 >
                   <Typography component={"p"} className="nav-para-small">
-                    <a className="nav-para-a-small" href="/home">
+                    <a className="nav-para-a-small" href="#home" onClick={()=>handleClick('homeRef')}> 
                       home
                     </a>
                   </Typography>
                   <Typography component={"p"} className="nav-para-small">
-                    <a className="nav-para-a-small" href="/about">
+                    <a className="nav-para-a-small" href="#about" onClick={()=>handleClick('aboutRef')}>
                       about us
                     </a>
                   </Typography>
                   <Typography component={"p"} className="nav-para-small">
-                    <a className="nav-para-a-small" href="/services">
+                    <a className="nav-para-a-small" href="#services" onClick={()=>handleClick('servicesRef')}>
                       services
                     </a>
                   </Typography>
                   <Typography component={"p"} className="nav-para-small">
-                    <a className="nav-para-a-small" href="/work">
+                    <a className="nav-para-a-small" href="#work" onClick={()=>handleClick('workRef')}>
                       work process
                     </a>
                   </Typography>
                   <Typography component={"p"} className="nav-para-small">
-                    <a className="nav-para-a-small" href="/portfolio">
+                    <a className="nav-para-a-small" href="#portfolio" onClick={()=>handleClick('portfolioRef')}>
                       portfolio
                     </a>
                   </Typography>
                   <Typography component={"p"} className="nav-para-small">
-                    <a className="nav-para-a-small" href="/ourteam">
+                    <a className="nav-para-a-small" href="#ourteam" onClick={()=>handleClick('ourTeamRef')}>
                       our team
                     </a>
                   </Typography>
                   <Typography component={"p"} className="nav-para-small">
-                    <a className="nav-para-a-small" href="/contact">
+                    <a className="nav-para-a-small" href="#contact" onClick={()=>handleClick('contactRef')}>
                       contact
                     </a>
                   </Typography>

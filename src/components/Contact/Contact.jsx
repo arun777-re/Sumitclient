@@ -4,10 +4,10 @@ import { Box, Typography } from '@mui/material'
 import './Contact.css'
 const Contact = () => {
   return (
-    <Box sx={{backgroundColor:"whitesmoke"}}>
+  <Box bgcolor={'whitesmoke'}>
 
     <Box className='contact-main page-container' height={'700px'}
-    id='contact' >
+    id='contacts'>
 
       <Box component={'div'} className='contact-main-1'> 
 <Typography variant='h4'
@@ -43,9 +43,9 @@ sx={{flex:"1.5"}}>
       <Form/>
 
 </Box>
-
+  </Box>
+     
       </Box>
-    </Box>
     </Box>
 
   )

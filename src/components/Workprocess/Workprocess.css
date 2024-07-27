@@ -4,8 +4,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     margin: 0px 50px 0px 50px;
+    background-color: whitesmoke;
+    opacity: 3;
 }
 
 .workspace-main-text1{
@@ -15,7 +17,7 @@
    margin-bottom: 25px;
 }
 
-h2{
+.workspace-main-text1 h2{
     font-size: 32px;
     text-transform: uppercase;
     text-align: center;
@@ -23,21 +25,17 @@ h2{
     color: #333333;
     line-height: 1.3em;
     font-family:var(--font-base);
-
-
 }
-h4{
-    font-size:21px;;
-    text-transform: uppercase;
-    text-align: center;
-}
-p{
+
+.workspace-main-text1 p{
     font-family: var(--font-text);
     letter-spacing: 1px;
     margin: 0 0 10px;
     line-height: 1.7em;
     color: #888;
     font-size: 14px;
+    opacity: 0.8;
+
 }
 
 
@@ -53,13 +51,21 @@ gap: 100px;
     border: none;
     background-color: transparent;
     color:#888;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.7em;
     letter-spacing: 0.7px;
     cursor: pointer;
     outline: none;
     text-align: center;
 
+}
+.workspace-main-icons-btn img{
+  height: 40px;
+  width: 40px;
+}
+.workspace-main-icons-btn p {
+  font-family: var(--font-text);
+   font-size: 10px;
 }
 .workspace-main-icons-btn:hover{
 color: #333333;
@@ -72,6 +78,18 @@ color: #333333;
     gap: 18px;
     flex-direction: row;
     align-items: center;
+    margin-top: 30px;
+}
+.workspace-main-text2 h4{
+  font-size:21px;;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.workspace-main-text2 p{
+  font-family: var(--font-base);
+  font-size: 14px;
+  opacity: 0.8;
 }
 
 

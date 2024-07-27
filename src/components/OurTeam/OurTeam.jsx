@@ -47,13 +47,13 @@ const OurTeam = () => {
         </Box>
         <Box component={"div"} className="team-main-2-wrapper">
           <Box component={"div"} className="team-main-2-wrapper-icon">
-            <a href="/">
+            <a href="/facebook.com">
               <FacebookIcon />
             </a>
-            <a href="/">
+            <a href="twitter.com">
               <XIcon />
             </a>
-            <a href="/">
+            <a href="linkedin.com">
               <LinkedInIcon />
             </a>
           </Box>

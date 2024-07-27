@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import { Box } from '@mui/material';
-import {PostCard} from '../../component'
+import {PostCard} from '../../component';
+import './portfolio.css';
 
 const PortFolia = () => {
     const [post,setPost] = useState([])
@@ -30,11 +31,12 @@ const PortFolia = () => {
        allPosts();
     },[])
   return (
+    <div  className='portfolio-main' id='portfolio'>
+    <h2>Our Work</h2>
     <Box component={'div'}
-    display={"flex"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"center"}
-    float={"right"} gap={"40px"}
-    sx={{overflowY:"auto",mb:"19px"}}
-    >
+   
+    className='portfolio-main-projects'
+   >
       {post?.map((posts)=>{
         return <PostCard key={posts._id}
         id={posts._id}
@@ -43,6 +45,8 @@ const PortFolia = () => {
         title={posts.title}/>
       })}
     </Box>
+    </div>
+
   )
 }
 

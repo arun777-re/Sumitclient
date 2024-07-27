@@ -5,9 +5,9 @@ import "./Workprocess.css";
 const WorkProcess = () => {
   // useState hook to change the heading text when clicked
   
-  const [text1, setText1] = useState("Discussion");
-  const [text2, setText2] = useState("I start by engaging with clients to understand their vision,");
-  const [heading, setHeading] = useState("Through thorough discussions, I clarify project objectives, ensuring every design decision supports the client's brand and message.");
+  const [text1, setText1] = useState("I start by engaging with clients to understand their vision");
+  const [text2, setText2] = useState("Through thorough discussions, I clarify project objectives, ensuring every design decision supports the client's brand and message.");
+  const [heading, setHeading] = useState("Discussion");
 
   const Dref = useRef();
   const Cref = useRef();
@@ -109,7 +109,6 @@ const WorkProcess = () => {
           >
             <img src={aeroplane} alt="aeroplane"/>
             <p>PRODUCTION</p>
-            
           </div>
           <div
             ref={Href}
@@ -127,7 +126,7 @@ const WorkProcess = () => {
       <Box component={"div"} className="workspace-main-text2">
         <h4>
           {heading}
-          <br />
+          <br/>
         </h4>
         <p>{text1}</p>
         <p>{text2}</p>

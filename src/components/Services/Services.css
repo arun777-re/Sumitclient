@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 230px;
+  gap: 180px;
   background-color: #fff;
   height: 90vh;
   margin: 0px 50px 0px 50px;
@@ -92,7 +92,7 @@
   display: grid;
   grid-template-columns: 60px 60px;
   grid-template-rows: 30px 30px;
-  gap: 10px; /* Adjust gap between grid items as needed */
+  gap: 10px; 
   justify-items: center; /* Center items horizontally within grid cells */
   align-items: center; /* Center items vertically within grid cells */
   font-size: 14px;
